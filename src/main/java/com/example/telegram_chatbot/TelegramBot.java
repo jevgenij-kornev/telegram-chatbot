@@ -1,20 +1,29 @@
 package com.example.telegram_chatbot;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
+@Component
 public class TelegramBot extends TelegramLongPollingBot {
+
+    @Value("${telegram.bot.username}")
+    private String botUsername;
+
+    @Value("${telegram.bot.token}")
+    private String botToken;
 
     @Override
     public String getBotUsername() {
-        return "chat_gpt_bot_or_education_bot"; // замените на имя вашего бота
+        return botUsername;
     }
 
     @Override
     public String getBotToken() {
-        return "7383953677:AAHvo7L2HfbewJcqfaJNJIGkq3yqj_cM81A"; // замените на токен вашего бота
+        return botToken;
     }
 
     @Override
