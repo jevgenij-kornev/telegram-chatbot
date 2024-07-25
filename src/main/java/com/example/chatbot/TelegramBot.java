@@ -1,6 +1,6 @@
-package com.example.telegram_chatbot;
+package com.example.chatbot;
 
-import com.example.telegram_chatbot.service.OpenAIService;
+import com.example.chatbot.service.OpenAIService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

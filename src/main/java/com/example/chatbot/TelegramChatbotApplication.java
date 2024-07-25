@@ -1,4 +1,4 @@
-package com.example.telegram_chatbot;
+package com.example.chatbot;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
